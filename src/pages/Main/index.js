@@ -1,5 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+import EventItem from '../../components/EventItem';
+
 import * as Calendar from 'expo-calendar';
 import styles from './styles';
 
@@ -46,11 +50,12 @@ export default function Main() {
   }
 
   return (
-    <View style={styles.container}>
-        <Text>Teste oi</Text>
-        <TouchableOpacity onPress={createEvent}>
-          <Text>{calendarID}</Text>
-        </TouchableOpacity>
-    </View>
+    <LinearGradient colors={['#5411d9', '#7314a3', '#9c0b99']} style={styles.container}>
+      <Text style={styles.textEventsToday}>Compromissos de hoje...</Text>
+      <EventItem/>
+      <EventItem/>
+      <EventItem/>
+      <EventItem/>
+    </LinearGradient>
   );
 }

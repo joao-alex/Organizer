@@ -10,7 +10,17 @@ const styles = StyleSheet.create({
         width:'90%',
         backgroundColor:'#fff',
         borderRadius:5,
-        margin:10
+        margin:10,
+        paddingTop:20,
+        paddingLeft:10
+    },
+    label:{
+        fontWeight:'bold',
+        fontSize:16,
+    },
+    dataText:{
+        color:'#999',
+        marginBottom:10
     }
 });
 

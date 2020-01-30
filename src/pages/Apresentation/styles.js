@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
         borderBottomColor:'#fff',
         fontSize:30,
         color:'#fff',
-        fontWeight:'bold'
+        fontWeight:'bold',
+        textAlign:'center'
     }
 })
 

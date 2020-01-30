@@ -7,7 +7,7 @@ import EventItem from '../../components/EventItem';
 import * as Calendar from 'expo-calendar';
 import styles from './styles';
 
-export default function Main() {
+export default function Main({navigationOptions}) {
   const [calendarID, setCalendarID] = useState('');
 
   useEffect(()=>{
@@ -38,16 +38,6 @@ export default function Main() {
     }
     initCalendar();
   },[])
-
-  async function createEvent(){
-    await Calendar.createEventAsync(calendarID,{
-      title:'Teste123',
-      startDate:Date.now(),
-      endDate:Date.now(),
-      allDay:true,
-      alarms:Calendar.AlarmMethod.ALARM,
-    })
-  }
 
   return (
     <LinearGradient colors={['#5411d9', '#7314a3', '#9c0b99']} style={styles.container}>
